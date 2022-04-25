@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="entities">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/MusicLandScape_Kelmendi/entities.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
