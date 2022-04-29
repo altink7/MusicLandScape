@@ -7,6 +7,19 @@ public class Track {
     private Artist performer=new Artist();
     private int year;
 
+    public Track(){
+    }
+    public Track(String title){
+        this.title=title;
+    }
+
+    public Track(Track other){
+        this.title=other.title;
+        this.duration=other.duration;
+        this.writer=new Artist(other.writer);
+        this.performer=new Artist(other.performer);
+        this.year=other.year;
+    }
 
     public int getYear(){
         return year;
@@ -41,13 +54,12 @@ public class Track {
     public Artist getWriter() {
         return writer;
     }
-    public void setWriter(Artist writer) {
-        if(writer==null){
 
-        }else {
+    public void setWriter(Artist writer) {
+        if(writer==null) {
+        }else{
             this.writer = writer;
         }
-
     }
 
 
@@ -55,8 +67,8 @@ public class Track {
         return performer;
     }
     public void setPerformer(Artist performer) {
-        if(performer==null){
-        }else {
+        if(performer==null) {
+        }else{
             this.performer = performer;
         }
     }
@@ -83,10 +95,9 @@ public class Track {
              namewF = String.format("%10s", writer.getName());
         }
 
-        if(performer!=null){
-            if(performer.getName()!=null) {
+        if(performer==null||performer.getName()==null) {
+        }else{
                 namepF = String.format("%10s", performer.getName());
-            }
          }
 
         String timeF = String.format("(%02d:%02d)",duration/60,duration%60);
