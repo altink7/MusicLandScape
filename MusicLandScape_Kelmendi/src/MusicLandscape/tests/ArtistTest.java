@@ -30,7 +30,7 @@ import static org.testng.Assert.*;
  */
 public class ArtistTest {
 
-	@Test
+	/*@Test
 	public void checkInit() {
 		Artist toTest = new Artist();
 		// reflect private field name
