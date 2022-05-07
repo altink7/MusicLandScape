@@ -4,11 +4,23 @@ import MusicLandscape.Date;
 import MusicLandscape.Venue;
 
 public class Event {
-    private Artist artist=new Artist();
-    int attendees;
-    private Date date;
+    protected Artist artist=new Artist();
+    protected int attendees;
+    protected Date date;
     String description="";
-    private Venue venue;
+    protected Venue venue;
+
+    public Event(){
+
+    }
+
+    public Event(Event other) {
+        this.artist= new Artist(other.artist);
+        this.attendees=other.attendees;
+        this.date=new Date(other.date);
+        this.description=other.description;
+        this.venue=new Venue(other.venue);
+    }
 
     public Artist getArtist() {
         return artist;
@@ -67,4 +79,17 @@ public class Event {
     public void setVenue(Venue venue) {
         this.venue = venue;
     }
+
+    public int impact(){
+        return attendees*2;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s @ %s on %s\n%s\n(%d attending (%d))",
+                getArtist(),(venue==null?"unknown":venue.getName()),getDate(),getDescription(),getAttendees(), impact());
+    }
+
+
+
 }
