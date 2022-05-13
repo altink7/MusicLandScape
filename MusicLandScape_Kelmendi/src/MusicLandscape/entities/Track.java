@@ -1,8 +1,10 @@
 package MusicLandscape.entities;
 
+import MusicLandscape.util.ConsoleScanable;
+
 import java.util.Scanner;
 
-public class Track implements ConsoleScanable{
+public class Track implements ConsoleScanable {
 
     Scanner sc = new Scanner(System.in);
     private String title;
