@@ -6,16 +6,16 @@ public abstract class Release {
     protected String title;
 
 
-    Release(){
+    public Release(){
     }
 
-    Release(Release other){
+    public Release(Release other){
         this.artist=new Artist(other.artist);
         this.year=other.year;
         this.title=other.title;
     }
 
-    Release(String title, Artist artist, int year){
+    public Release(String title, Artist artist, int year){
         this.title=title;
         this.artist=new Artist(artist);
         this.year=year;
@@ -45,7 +45,7 @@ public abstract class Release {
         this.title = title;
     }
 
-    abstract int totalTime();
+    public abstract int totalTime();
 
     @Override
     public String toString() {

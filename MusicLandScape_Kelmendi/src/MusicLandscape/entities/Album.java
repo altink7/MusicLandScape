@@ -3,15 +3,15 @@ package MusicLandscape.entities;
 public class Album extends Release{
 public TrackListItem trackListHead ;
 
-Album(){
+public Album(){
 
 }
 
-Album(Album other){
+public Album(Album other){
     this.trackListHead=other.trackListHead;
 }
 
-Album(String title, Artist artist, int year){
+public Album(String title, Artist artist, int year){
     Track t=new Track(title);
     t.setPerformer(artist);
     t.setYear(year);
@@ -76,7 +76,7 @@ public Track[] getTracks(){
 }
 
     @Override
-    int totalTime() {
+    public int totalTime() {
         return 0;
     }
 
