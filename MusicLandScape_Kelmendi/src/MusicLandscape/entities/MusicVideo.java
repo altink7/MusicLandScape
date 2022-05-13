@@ -18,16 +18,12 @@ public class MusicVideo extends Release{
 
     @Override
     public int totalTime() {
-        return 0;
+        return track.getDuration();
     }
 
     @Override
     public String toString() {
-        return "MusicVideo{" +
-                "track=" + track +
-                ", artist=" + artist +
-                ", year=" + year +
-                ", title='" + title + '\'' +
-                '}';
+
+        return (title==null?"unknown":title)+"-"+(artist==null?"unknown":artist)+"-"+(year==0?"unknown":year)+"-0-(Video)";
     }
 }

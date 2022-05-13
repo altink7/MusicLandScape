@@ -1,8 +1,8 @@
 package MusicLandscape.entities;
 
 public abstract class Release {
-    protected Artist artist;
-    protected int year;
+    protected Artist artist=new Artist();
+    protected int year=1900;
     protected String title;
 
 
@@ -17,7 +17,7 @@ public abstract class Release {
 
     public Release(String title, Artist artist, int year){
         this.title=title;
-        this.artist=new Artist(artist);
+        this.artist=artist;
         this.year=year;
     }
 
@@ -34,7 +34,9 @@ public abstract class Release {
     }
 
     public void setYear(int year) {
-        this.year = year;
+        if(year>-1) {
+            this.year = year;
+        }
     }
 
     public String getTitle() {
@@ -49,10 +51,6 @@ public abstract class Release {
 
     @Override
     public String toString() {
-        return "Release{" +
-                "artist=" + artist +
-                ", year=" + year +
-                ", title='" + title + '\'' +
-                '}';
+        return (title==null?"unknown":title)+"-"+(artist==null?"unknown":artist)+"-"+(year==0?"unknown":year)+"-0";
     }
 }

@@ -1,8 +1,8 @@
 package MusicLandscape.entities;
 
 public class TrackListItem {
-TrackListItem next;
 Track track;
+TrackListItem next;
 
 TrackListItem(Track track){
     this.track=track;

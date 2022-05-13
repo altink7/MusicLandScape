@@ -9,29 +9,35 @@ public Album(){
 
 public Album(Album other){
     this.trackListHead=other.trackListHead;
+    this.artist=new Artist(other.artist);
+    this.title=other.title;
+    this.year=other.year;
 }
 
-public Album(String title, Artist artist, int year){
-    Track t=new Track(title);
-    t.setPerformer(artist);
-    t.setYear(year);
+public Album(String title1, Artist artist1, int year1){
+    Track t=new Track();
+    t.setTitle(title1);
+    t.setPerformer(artist1);
+    t.setYear(year1);
     trackListHead=new TrackListItem(t);
 }
 
-public boolean addTrack(Track track){
-    TrackListItem neu = new TrackListItem(track);
+public boolean addTrack(Track t){
+    if(t!=null){
+        TrackListItem neu = new TrackListItem(t);
 
-    if(trackListHead== null){
-        trackListHead = neu;
-    }
-    else{
-        TrackListItem current = trackListHead;
-        while(current.next != null) {
-            current = current.next;
+        if (trackListHead == null) {
+            trackListHead = neu;
+        } else {
+            TrackListItem current = trackListHead;
+            while (current.next != null) {
+                current = current.next;
+            }
+            current.next = neu;
         }
-        current.next = neu;
+        return true;
     }
-    return true;
+    return false;
 }
 
 public TrackListItem getTrackListItem(int idx){

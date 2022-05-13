@@ -112,8 +112,19 @@ public class Track implements ConsoleScanable {
     }
 
     public boolean scan(){
-        title=sc.nextLine();
-        duration=sc.nextInt();
+        String a=sc.nextLine();
+        if(a==null){
+            System.out.print("try again");
+            return false;
+        }
+        setTitle(a);
+
+        int b= sc.nextInt();
+        if(b<0){
+            System.out.print("try again");
+            return false;
+        }
+        setDuration(b);
         return true;
     }
 
