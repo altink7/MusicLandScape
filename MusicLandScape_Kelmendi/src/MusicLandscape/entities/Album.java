@@ -34,20 +34,19 @@ public boolean addTrack(Track track){
     return true;
 }
 
-public Track removeTrack(int idx){
+public TrackListItem getTrackListItem(int idx){
     TrackListItem x =trackListHead;
-    for(int i=0; i < idx-1; i++){
+    for(int i=0; i < idx; i++){
         x = x.next;
     }
-    TrackListItem y =trackListHead;
-    for(int i=0; i < idx+1; i++){
-        y = y.next;
-    }
-    TrackListItem z =trackListHead;
-    for(int i=0; i < idx; i++){
-        z = z.next;
-    }
-    Track deleted =new Track(z.track);
+    return x;
+}
+
+public Track removeTrack(int idx){
+    TrackListItem x =getTrackListItem(idx-1);
+    TrackListItem y =getTrackListItem(idx+1);
+
+    Track deleted =new Track(getTrackListItem(idx).track);
 
     if(idx==0){
         trackListHead=trackListHead.next;
@@ -59,8 +58,35 @@ public Track removeTrack(int idx){
     return deleted;
 }
 
+public int nrTracks(){
+    int count=0;
+    TrackListItem x =trackListHead;
+    while(x!=null){
+        x=x.next;
+    }
+    return count;
+}
+
+public Track[] getTracks(){
+    Track[] x = new Track[nrTracks()];
+    for(int i=0;i<x.length;i++){
+        x[i]=getTrackListItem(i).track;
+    }
+    return x;
+}
+
     @Override
     int totalTime() {
         return 0;
+    }
+
+    @Override
+    public String toString() {
+        return "Album{" +
+                "trackListHead=" + trackListHead +
+                ", artist=" + artist +
+                ", year=" + year +
+                ", title='" + title + '\'' +
+                '}';
     }
 }

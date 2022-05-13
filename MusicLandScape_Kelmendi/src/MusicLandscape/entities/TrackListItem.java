@@ -5,6 +5,6 @@ TrackListItem next;
 Track track;
 
 TrackListItem(Track track){
-    TrackListItem.track=track;
+    this.track=track;
 }
 }
