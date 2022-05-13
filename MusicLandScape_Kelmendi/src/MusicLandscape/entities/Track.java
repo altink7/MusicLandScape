@@ -1,6 +1,10 @@
 package MusicLandscape.entities;
 
-public class Track {
+import java.util.Scanner;
+
+public class Track implements ConsoleScanable{
+
+    Scanner sc = new Scanner(System.in);
     private String title;
     private int duration;
     private Artist writer=new Artist();
@@ -106,7 +110,8 @@ public class Track {
     }
 
     public boolean scan(){
-
+        title=sc.nextLine();
+        duration=sc.nextInt();
         return true;
     }
 
