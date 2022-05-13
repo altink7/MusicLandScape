@@ -49,19 +49,20 @@ public TrackListItem getTrackListItem(int idx){
 }
 
 public Track removeTrack(int idx){
-    TrackListItem x =getTrackListItem(idx-1);
-    TrackListItem y =getTrackListItem(idx+1);
+    if(idx>nrTracks()){
+        return null;
+    }else {
 
-    Track deleted =new Track(getTrackListItem(idx).track);
+        Track deleted = new Track(getTrackListItem(idx).track);
 
-    if(idx==0){
-        trackListHead=trackListHead.next;
+        if (idx == 0) {
+            trackListHead = trackListHead.next;
+        } else {
+            getTrackListItem(idx - 1).next = getTrackListItem(idx + 1);
+        }
+
+        return deleted;
     }
-    else{
-        x.next=y;
-    }
-
-    return deleted;
 }
 
 public int nrTracks(){
@@ -69,14 +70,19 @@ public int nrTracks(){
     TrackListItem x =trackListHead;
     while(x!=null){
         x=x.next;
+        count++;
     }
     return count;
 }
 
 public Track[] getTracks(){
     Track[] x = new Track[nrTracks()];
-    for(int i=0;i<x.length;i++){
-        x[i]=getTrackListItem(i).track;
+    TrackListItem y=trackListHead;
+    int i=0;
+    while(y!=null){
+        x[i]=y.track;
+        i++;
+        y=y.next;
     }
     return x;
 }
@@ -88,11 +94,6 @@ public Track[] getTracks(){
 
     @Override
     public String toString() {
-        return "Album{" +
-                "trackListHead=" + trackListHead +
-                ", artist=" + artist +
-                ", year=" + year +
-                ", title='" + title + '\'' +
-                '}';
+        return (title==null?"unknown":title)+"-"+(artist==null?"unknown":artist)+"-"+(year==0?"unknown":year)+"-0"+"\n[]";
     }
 }
