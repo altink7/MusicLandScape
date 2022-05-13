@@ -105,6 +105,11 @@ public class Track {
         return titleF.substring(0,10)+" by "+namewF.substring(0,10)+ " performed by "+namepF.substring(0,10)+" "+timeF;
     }
 
+    public boolean scan(){
+
+        return true;
+    }
+
     @Override
     public String toString() {
         return this.getString();
