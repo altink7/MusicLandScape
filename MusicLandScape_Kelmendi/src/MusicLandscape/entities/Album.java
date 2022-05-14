@@ -14,12 +14,10 @@ public Album(Album other){
     this.year=other.year;
 }
 
-public Album(String title1, Artist artist1, int year1){
-    Track t=new Track();
-    t.setTitle(title1);
-    t.setPerformer(artist1);
-    t.setYear(year1);
-    trackListHead=new TrackListItem(t);
+public Album(String title, Artist artist, int year){
+    this.title=title;
+    this.artist=artist;
+    this.year=year;
 }
 
 public boolean addTrack(Track t){
@@ -52,13 +50,12 @@ public Track removeTrack(int idx){
     if(idx>nrTracks()){
         return null;
     }else {
-
-        Track deleted = new Track(getTrackListItem(idx).track);
+        Track deleted=getTrackListItem(idx).track;
 
         if (idx == 0) {
             trackListHead = trackListHead.next;
         } else {
-            getTrackListItem(idx - 1).next = getTrackListItem(idx + 1);
+            getTrackListItem(idx-1).next = getTrackListItem(idx + 1);
         }
 
         return deleted;
@@ -80,7 +77,7 @@ public Track[] getTracks(){
     TrackListItem y=trackListHead;
     int i=0;
     while(y!=null){
-        x[i]=y.track;
+        x[i]=new Track(y.track);
         i++;
         y=y.next;
     }
@@ -89,11 +86,17 @@ public Track[] getTracks(){
 
     @Override
     public int totalTime() {
-        return 0;
+        int time=0;
+        TrackListItem y=trackListHead;
+        while(y!=null) {
+            time+=y.track.getDuration();
+            y=y.next;
+        }
+        return time;
     }
 
     @Override
     public String toString() {
-        return (title==null?"unknown":title)+"-"+(artist==null?"unknown":artist)+"-"+(year==0?"unknown":year)+"-0"+"\n[]";
+        return (title==null?"unknown":title)+"-"+(artist==null?"unknown":artist)+"-"+(year==0?"unknown":year)+"-"+0+"\n[]";
     }
 }
