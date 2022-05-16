@@ -52,7 +52,7 @@ public class ConsoleScanableTest {
 	}
 
 
- /* @Test(dataProvider="inout", description="scan changes Track as expected?")
+ @Test(dataProvider="inout", description="scan changes Track as expected?")
   public void testScan(String input, String title, String duration){
 	  Track toTest= new Track();
 	  	
@@ -74,5 +74,5 @@ public class ConsoleScanableTest {
 		assertEquals(toTest.getTitle(),title );
 		//check duration value
 		assertEquals(toTest.getDuration(),Integer.parseInt(duration) );
-  }*/
+  }
 }

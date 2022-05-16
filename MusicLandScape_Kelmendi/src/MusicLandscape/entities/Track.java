@@ -111,25 +111,88 @@ public class Track implements ConsoleScanable {
         return titleF.substring(0,10)+" by "+namewF.substring(0,10)+ " performed by "+namepF.substring(0,10)+" "+timeF;
     }
 
-    public boolean scan(){
-        String a=sc.nextLine();
-        if(a==null){
-            System.out.print("try again");
-            a=sc.nextLine();
-        }
-        setTitle(a);
-
-        int b= sc.nextInt();
-        if(b<0){
-            System.out.print("try again");
-            b= sc.nextInt();
-        }
-        setDuration(b);
-        return true;
-    }
 
     @Override
     public String toString() {
         return this.getString();
     }
+
+    /*@Override
+    public boolean scan() {
+        boolean fieldChanged = false;
+        boolean fieldChanged2 = false;
+        boolean objectChanged = false;
+        boolean objectChanged2 = false;
+        Scanner sc = new Scanner(System.in);
+        String input;
+        int durationInput;
+
+        do {
+            System.out.printf("current title: %s\n", this.title);
+            System.out.print("enter new title (leave empty to keep):");
+            input = sc.nextLine();
+            System.out.printf("current duration: %s\n", this.duration);
+            System.out.print("enter new duration (enter 0 to keep):");
+            durationInput=sc.nextInt();
+
+            if (input.length() == 0) { // keep old value?
+                fieldChanged = false;
+                break;
+            }
+            if (durationInput == 0) { // keep old value?
+                fieldChanged2 = false;
+                break;
+            }
+
+            fieldChanged = true;
+            fieldChanged2 =true;
+            break;
+        } while (true);
+        if (fieldChanged) {
+            setTitle(input);
+        }
+        if (fieldChanged2) {
+            setDuration(durationInput);
+        }
+        objectChanged = objectChanged || fieldChanged;
+        fieldChanged = false; // set up for next field
+
+        objectChanged2 = objectChanged2 || fieldChanged2;
+        fieldChanged2 = false; // set up for next field
+
+
+
+        return objectChanged;
+    }*/
+
+    @Override
+    public boolean scan() {
+        boolean fieldChanged = false, objectChanged = false;
+        Scanner sc = new Scanner(System.in);
+        String input;
+        // scanning title
+        do {
+            System.out.printf("current title: %s\n", this.title);
+            System.out.printf("enter new title (leave empty to keep):");
+            input = sc.nextLine();
+            if (input.length() == 0) { // keep old value?
+                fieldChanged = false;
+                break;
+            }
+
+            fieldChanged = true;
+            break;
+        } while (true);
+        if (fieldChanged) {
+            setTitle(input);
+        }
+        objectChanged = objectChanged || fieldChanged;
+        fieldChanged = false; // set up for next field
+
+        // scan next field(s)
+
+
+        return objectChanged;
+    }
+
 }
