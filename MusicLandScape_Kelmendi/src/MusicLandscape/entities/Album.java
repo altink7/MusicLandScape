@@ -47,6 +47,7 @@ public TrackListItem getTrackListItem(int idx){
 }
 
 public Track removeTrack(int idx){
+
     if(idx>nrTracks()){
         return null;
     }else {
@@ -57,9 +58,9 @@ public Track removeTrack(int idx){
         } else {
             getTrackListItem(idx-1).next = getTrackListItem(idx + 1);
         }
-
         return deleted;
     }
+
 }
 
 public int nrTracks(){
@@ -77,7 +78,7 @@ public Track[] getTracks(){
     TrackListItem y=trackListHead;
     int i=0;
     while(y!=null){
-        x[i]=new Track(y.track);
+        x[i]=y.track;
         i++;
         y=y.next;
     }
@@ -97,6 +98,12 @@ public Track[] getTracks(){
 
     @Override
     public String toString() {
-        return (title==null?"unknown":title)+"-"+(artist==null?"unknown":artist)+"-"+(year==0?"unknown":year)+"-"+0+"\n[]";
+    StringBuilder trackString= new StringBuilder();
+        trackString.append("[");
+    for(int i=0;i<nrTracks();i++){
+        trackString.append("[").append(getTrackListItem(i).track.getTitle()).append("]");
+    }
+        trackString.append("]");
+        return (title==null?"unknown":title)+"-"+(artist==null?"unknown":artist)+"-"+(year==0?"unknown":year)+"-"+totalTime()+"\n"+(nrTracks()==0?"[]":trackString);
     }
 }
