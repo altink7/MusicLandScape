@@ -2,7 +2,7 @@
 // 
 //       git.rev = 234
 //  git.revision = fdd4980be270473bdd7e8206afeda65ab6e4c3a4
-//         stage = ES03
+//         stage = ES05
 //
 // ***************************************************
 
@@ -25,32 +25,56 @@ import static org.testng.Assert.*;
  * 
  * @author TeM
  * @version 234
- * @Stage ES03
+ * @Stage ES05
  *
  */
 public class ArtistTest {
 
-	@DataProvider(name = "names2")
-	private static Object[][] names2() {
-		return new Object[][] { { null, "unknown" }, { "kiss", "kiss" },
-				{ "", "unknown" }, { "  ", "unknown" },
-				{ "Jon Bon Jovi", "Jon Bon Jovi" } };
-	}
+	
+	
+	
+	
+	
+	
+	
+	
+
 		
 	 
 	
-	/**************** ES 03 ***********************/
-	@Test(dataProvider = "names2")
-	public void testtoString(String in, String out) {
-		
-		boolean myTest=(new Artist(in).toString()==out)||
-				(new Artist(in).toString()==in);
-		assertEquals(myTest, true);
+
+	
+	/**************** ES 05 ***********************/
+	@Test(description="checks if Artist implements interface")
+	public void checkInterface(){
+		assertTrue(new Artist() instanceof Comparable, "the class should implement the interface ");
 	}
 	
-
-
 	
+	  @Test(dataProvider="name", description="checks if comparison is done lexicographically")
+	  public void compareTo(String t1, String t2, int res) {
 
+		  Artist left= new Artist(t1);
+		  Artist right= new Artist(t2);
+		  int result = left.compareTo(right);
+		  
+		  if(res>0){
+			  assertTrue(result>0, "first should be bigger than second");  
+		  }else if(res==0){
+			  assertTrue(result==0, "both should be equal");
+		  }else if(res<0){
+			  assertTrue(result<0, "first should be smaller than second");
+		  }
+	  }
+	  
+	  @DataProvider(name = "name")
+		private static Object[][] title() {
+			return new Object[][] {
+					{ "same", "same", 0}, 
+					{"same", "other", 4}, 
+					{"other", "same", -4} 
+					};
+		}
+	
 	
 }
