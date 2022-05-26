@@ -5,7 +5,7 @@
 //         stage = ES03
 //
 // ***************************************************
-package MusicLandscape.tests;
+package MusicLandscape.OLDtests;
 import static org.testng.Assert.*;
 import static org.mockito.Mockito.*;
 

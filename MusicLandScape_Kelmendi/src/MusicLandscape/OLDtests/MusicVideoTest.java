@@ -5,7 +5,7 @@
 //         stage = ES04
 //
 // ***************************************************
-package MusicLandscape.tests;
+package MusicLandscape.OLDtests;
 import static org.mockito.Mockito.mock;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.fail;

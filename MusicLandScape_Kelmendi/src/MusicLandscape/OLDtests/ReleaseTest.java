@@ -5,7 +5,7 @@
 //         stage = ES04
 //
 // ***************************************************
-package MusicLandscape.tests;
+package MusicLandscape.OLDtests;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;

@@ -5,13 +5,11 @@
 //         stage = ES04
 //
 // ***************************************************
-package MusicLandscape.tests;
+package MusicLandscape.OLDtests;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.fail;
 
-import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
-import java.io.InputStreamReader;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;

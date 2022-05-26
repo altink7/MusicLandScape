@@ -5,7 +5,7 @@
 //         stage = ES04
 //
 // ***************************************************
-package MusicLandscape.tests;
+package MusicLandscape.OLDtests;
 import org.testng.annotations.Test;
 
 import MusicLandscape.entities.*;

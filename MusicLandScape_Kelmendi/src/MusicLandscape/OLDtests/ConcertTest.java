@@ -5,7 +5,7 @@
 //         stage = ES03
 //
 // ***************************************************
-package MusicLandscape.tests;
+package MusicLandscape.OLDtests;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 

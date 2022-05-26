@@ -5,7 +5,7 @@
 //         stage = ES04
 //
 // ***************************************************
-package MusicLandscape.tests;
+package MusicLandscape.OLDtests;
 
 import static org.testng.Assert.*;
 import java.lang.reflect.Field;
