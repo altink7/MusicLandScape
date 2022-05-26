@@ -30,20 +30,7 @@ import static org.testng.Assert.*;
  */
 public class ArtistTest {
 
-	
-	
-	
-	
-	
-	
-	
-	
 
-		
-	 
-	
-
-	
 	/**************** ES 05 ***********************/
 	@Test(description="checks if Artist implements interface")
 	public void checkInterface(){
