@@ -23,7 +23,6 @@ import MusicLandscape.container.*;
 import MusicLandscape.entities.Artist;
 import MusicLandscape.entities.Track;
 import MusicLandscape.util.comparators.DurationComparator;
-import MusicLandscape.util.matcher.TitleMatcher;
 
 /**
  * 
