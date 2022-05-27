@@ -11,15 +11,13 @@ public class MyTrackContainer {
     Set<Track> tracks;
     List<Track> selection;
 
-    public MyTrackContainer(){
-
-    }
-
-    public MyTrackContainer(Iterable<Track>){
-
-    }
-
     public MyTrackContainer(Track[] track ){
+    }
+
+    public MyTrackContainer(Iterable<Track> track){
+    }
+
+    public MyTrackContainer() {
 
     }
 
@@ -53,7 +51,7 @@ public class MyTrackContainer {
         return new Track[1];
     }
 
-    public boolean add(Track){
+    public boolean add(Track track){
         return false;
     }
 }
