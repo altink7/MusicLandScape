@@ -17,6 +17,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import MusicLandscape.util.matcher.TitleMatcher;
 import org.testng.annotations.Test;
 
 import MusicLandscape.container.*;
