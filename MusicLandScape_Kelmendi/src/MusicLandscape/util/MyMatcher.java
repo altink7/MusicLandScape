@@ -22,6 +22,9 @@ package MusicLandscape.util;
  */
 public abstract class MyMatcher<T> {
 
+	protected MyMatcher() {
+	}
+
 	/**
 	 * Matches a object against the pattern of this matcher.<br>
 	 * 

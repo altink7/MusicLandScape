@@ -27,4 +27,11 @@ public class TitleMatcher extends MyMatcher<Track> {
     public void setPattern(String pattern) {
         this.pattern = pattern;
     }
+
+    @Override
+    public String toString() {
+        return "TitleMatcher{" +
+                "pattern='" + pattern + '\'' +
+                '}';
+    }
 }

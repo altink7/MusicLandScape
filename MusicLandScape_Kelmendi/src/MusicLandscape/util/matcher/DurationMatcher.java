@@ -4,12 +4,12 @@ import MusicLandscape.entities.Track;
 import MusicLandscape.util.MyMatcher;
 
 public class DurationMatcher extends MyMatcher<Track> {
+    private int lower;
+    private int upper;
 
-    /**
-     * Creates a Matcher object with a specified pattern.<br>
-     *
-     * @param pat the pattern of this matcher
-     */
+    public DurationMatcher(){
+    }
+
     public DurationMatcher(String pat) {
         super(pat);
     }
@@ -29,4 +29,11 @@ public class DurationMatcher extends MyMatcher<Track> {
         return null;
     }
 
+    @Override
+    public String toString() {
+        return "DurationMatcher{" +
+                "lower=" + lower +
+                ", upper=" + upper +
+                '}';
+    }
 }
