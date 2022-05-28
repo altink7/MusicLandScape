@@ -14,6 +14,6 @@ public class TitleComparator implements java.util.Comparator<Track> {
 
     @Override
     public String toString() {
-        return "TitleComparator{}";
+        return "by title";
     }
 }

@@ -1,6 +1,7 @@
 package MusicLandscape.util.formatters;
 
 import MusicLandscape.entities.Track;
+import MusicLandscape.entities.TrackListItem;
 import MusicLandscape.util.MyFormatter;
 
 public class ShortTrackFormatter implements MyFormatter<Track> {
@@ -12,21 +13,23 @@ public class ShortTrackFormatter implements MyFormatter<Track> {
 
     @Override
     public String header() {
-        return null;
+        return "Title      (min:sec)";
     }
 
     @Override
     public String format(Track track) {
-        return null;
+
+        return String.format("%-10s (%02d:%02d)",(track.getTitle().length()>9?track.getTitle().substring(0,10):track.getTitle())
+                ,track.getDuration()/60,track.getDuration()%60);
     }
 
     @Override
     public String topSeparator() {
-        return null;
+        return "--------------------";
     }
 
     @Override
     public String toString() {
-        return "ShortTrackFormatter{}";
+        return "short format [Title (min:sec)]";
     }
 }

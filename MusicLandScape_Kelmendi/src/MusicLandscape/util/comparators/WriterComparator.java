@@ -10,11 +10,11 @@ public class WriterComparator implements java.util.Comparator<Track>{
 
     @Override
     public int compare(Track o1, Track o2) {
-        return 0;
+        return o1.getWriter().compareTo(o2.getWriter());
     }
 
     @Override
     public String toString() {
-        return "WriterComparator{}";
+        return "by writer";
     }
 }

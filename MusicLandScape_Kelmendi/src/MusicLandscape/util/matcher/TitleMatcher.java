@@ -21,17 +21,17 @@ public class TitleMatcher extends MyMatcher<Track> {
 
     @Override
     public boolean matches(Track track) {
-        return false;
+        return track.getTitle().matches(pattern + ".*");
     }
 
     public void setPattern(String pattern) {
-        this.pattern = pattern;
+        if(pattern!=null) {
+            this.pattern = pattern;
+        }
     }
 
     @Override
     public String toString() {
-        return "TitleMatcher{" +
-                "pattern='" + pattern + '\'' +
-                '}';
+        return "title starts with ("+ pattern + ')';
     }
 }

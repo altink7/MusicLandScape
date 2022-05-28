@@ -3,23 +3,30 @@ package MusicLandscape.container;
 import MusicLandscape.entities.Track;
 import MusicLandscape.util.MyMatcher;
 
-import java.util.Comparator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class MyTrackContainer {
-    Set<Track> tracks;
-    List<Track> selection;
+    List<Track> selection =new ArrayList<>();
+    Set<Track> tracks= new HashSet<>();
 
-    public MyTrackContainer(Track[] track ){
+    public MyTrackContainer() {
     }
 
     public MyTrackContainer(Iterable<Track> track){
+        for (Track value : track) {
+            add(value);
+            selection.add(value);
+        }
     }
 
-    public MyTrackContainer() {
-
+    public MyTrackContainer(Track[] track ){
+        for (Track value : track) {
+            add(value);
+            selection.add(value);
+        }
     }
+
+
 
     public void sort(Comparator<Track> track, boolean control){
 
@@ -38,20 +45,28 @@ public class MyTrackContainer {
         return 0;
     }
 
-    public int addAll(Track[] tracks){
-        return 0;
-
+    public int addAll(Track[] t){
+        tracks.addAll(tracks);
+        return t.length;
     }
 
     public int size(){
-        return 0;
+        return tracks.size();
     }
 
     public Track[] selection(){
-        return new Track[1];
+        Track[]tal=new Track[size()];
+        for (int i=0;i<size();i++){
+
+        }
+        return tal;
     }
 
     public boolean add(Track track){
+        if(track!=null) {
+            tracks.add(track);
+            return true;
+        }
         return false;
     }
 }

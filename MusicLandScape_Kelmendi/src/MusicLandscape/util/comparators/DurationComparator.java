@@ -14,6 +14,6 @@ public class DurationComparator implements java.util.Comparator<Track> {
 
     @Override
     public String toString() {
-        return "DurationComparator{}";
+        return "by duration";
     }
 }

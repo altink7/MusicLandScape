@@ -10,6 +10,7 @@ import static org.testng.Assert.*;
 
 import java.lang.reflect.Field;
 
+import MusicLandscape.util.matcher.TitleMatcher;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
