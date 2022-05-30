@@ -2,6 +2,8 @@ package MusicLandscape.container;
 
 import MusicLandscape.entities.Track;
 import MusicLandscape.util.MyMatcher;
+import MusicLandscape.util.matcher.DurationMatcher;
+
 import java.util.*;
 
 public class MyTrackContainer {
@@ -34,7 +36,7 @@ public class MyTrackContainer {
     }
 
     public int filter(MyMatcher<Track> matcher){
-        int n = 0;
+        int n = 1;
 
         for (Track track : selection) {
             if (!track.getTitle().contains(matcher.getPattern())) {
@@ -51,9 +53,16 @@ public class MyTrackContainer {
     }
 
     public int remove(){
-        int n=selection.size();
+        int i=0;
+
+        Set<Track> tracks1 = tracks;
+        for (Track track : selection) {
+            tracks1.remove(track);
+            i++;
+        }
         reset();
-        return n;
+
+       return i;
     }
 
     public int addAll(Track[] t){
