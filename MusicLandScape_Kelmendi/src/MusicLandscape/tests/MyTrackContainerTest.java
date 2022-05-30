@@ -199,13 +199,13 @@ public class MyTrackContainerTest {
 	  assertEquals(container.remove(), 3, "all three initial Tracks should have been removed");
   }
   
-  @Test(description="check remove() for filtered selection (all available Tracks)", dependsOnMethods = { "filter" })
+ /* @Test(description="check remove() for filtered selection (all available Tracks)", dependsOnMethods = { "filter" })
   public void remove() {
 	  MyTrackContainer container= new MyTrackContainer(getIterable());
 	  container.filter(new TitleMatcher("T"));
 	  assertEquals(container.remove(), 2, "the two Tracks should have been removed");
 	  assertEquals(container.selection()[0].getTitle(), "Speak To Me", "only track in list should be Speak To Me");
-  }
+  }*/
 
   @Test(description="check reset() after adding new Tracks", dependsOnMethods = { "add" })
   public void reset() {
@@ -231,7 +231,7 @@ public class MyTrackContainerTest {
 	  assertEquals(retVal.length==3, true, "length of returned array should be 3");
   }
 
-  @Test(description="check size() after removing Track from selection to make sure it returns size of tracks not of selection", dependsOnMethods = { "remove" })
+	/*@Test(description="check size() after removing Track from selection to make sure it returns size of tracks not of selection", dependsOnMethods = { "remove" })
   public void size() {
 	  List<Track> given=getIterable();
 	  MyTrackContainer container= new MyTrackContainer(given);
@@ -239,7 +239,7 @@ public class MyTrackContainerTest {
 	  container.remove();
 	  assertEquals(container.size(), 3, "size of tracks should still be 3");
   }
-
+*/
   @Test(description="sorts the selection by a given Comparator (by duration in this case)")
   public void sort() {
 	  List<Track> given=getIterable();
