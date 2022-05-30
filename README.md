@@ -2,11 +2,11 @@
 
 <!---Hier werden verschiedene Aktionen durchgeführt,wie:  Musiktitel, Sänger verwalten--->
 
-![GitHub repo size](https://img.shields.io/github/repo-size/iuricode/README-template?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/iuricode/README-template?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/iuricode/README-template?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/Altink7/README-template?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/Altink7/README-template?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/Altink7/README-template?style=for-the-badge)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/Altink7/README-template?style=for-the-badge)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/Altink7/README-template?style=for-the-badge)
 
 <img src="exemplo-image.png" alt="beispielfoto">
 
@@ -30,9 +30,9 @@ Bevor Sie beginnen, vergewissern Sie sich, dass Sie die folgenden Anforderungen 
 * Sie haben einen `<Windows/Linux/Mac>`-Rechner. Geben Sie an, welches Betriebssystem unterstützt/nicht unterstützt wird.
 * Sie lesen `<Leitfaden/Link/Dokumentation_zu_dem_Projekt>`.
 
-## 🚀 Installieren von <Projektname>
+## 🚀 Installieren von Musiclandscape
 
-Führen Sie die folgenden Schritte aus, um <Projektname> zu installieren:
+Führen Sie die folgenden Schritte aus, um MLP zu installieren:
 
 Linux und macOS:
 ```
@@ -76,7 +76,7 @@ Wir danken folgenden Personen, die zu diesem Projekt beigetragen haben:
       <a href="#">
         <br>
         <sub>
-          <b>Altin Kelmendi</b>
+          <h1>Altin Kelmendi</h1>
         </sub>
       </a>
     </td>
@@ -84,7 +84,7 @@ Wir danken folgenden Personen, die zu diesem Projekt beigetragen haben:
       <a href="#">
        <br>
         <sub>
-          <b>Julian Hoffmann</b>
+          <h1>Julian Hoffmann</h1>
         </sub>
       </a>
     </td>
