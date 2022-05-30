@@ -8,7 +8,7 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
 
-<img src="exemplo-image.png" alt="exemplo imagem">
+<img src="exemplo-image.png" alt="beispielfoto">
 
 > Zusatzdokumentation:
 
@@ -74,7 +74,7 @@ Wir danken folgenden Personen, die zu diesem Projekt beigetragen haben:
   <tr>
     <td align="center">
       <a href="#">
-        <img src="https://www.google.com/search?q=altin+kelmendi+foto&client=firefox-b-d&channel=crow5&sxsrf=ALiCzsbu-Ho95yYBZ3ICmma0UmG5DOAIYQ:1653937438627&source=lnms&tbm=isch&sa=X&ved=2ahUKEwidgIqM9Yf4AhWqS_EDHYgsDg0Q_AUoAXoECAEQAw&biw=1920&bih=1075&dpr=1#imgrc=xNG1ekF4xPX1JM" width="100px;" alt="Foto von Altin auf GitHub"/><br>
+        <br>
         <sub>
           <b>Altin Kelmendi</b>
         </sub>
@@ -82,7 +82,7 @@ Wir danken folgenden Personen, die zu diesem Projekt beigetragen haben:
     </td>
     <td align="center">
       <a href="#">
-        <img src="https://www.google.com/search?q=julian+hoffmann+willhaben&tbm=isch&ved=2ahUKEwi3zf-M9Yf4AhUKBRoKHUovBY4Q2-cCegQIABAA&oq=julian+hoffmann+willhaben&gs_lcp=CgNpbWcQAzoECCMQJzoLCAAQgAQQsQMQgwE6CAgAELEDEIMBOggIABCABBCxAzoFCAAQgAQ6BAgAEEM6BwgAELEDEEM6BAgAEAM6BggAEB4QCDoECAAQGDoGCAAQChAYOgQIABAeUPEGWLE6YKk8aAJwAHgAgAFeiAGJD5IBAjI4mAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=IBWVYre9IYqKaMrelPAI&bih=1075&biw=1920&client=firefox-b-d#imgrc=348iQifZZQK-FM" width="100px;" alt="Foto von Julian"/><br>
+       <br>
         <sub>
           <b>Julian Hoffmann</b>
         </sub>
@@ -90,7 +90,7 @@ Wir danken folgenden Personen, die zu diesem Projekt beigetragen haben:
     </td>
     <td align="center">
       <a href="#">
-        <img src="https://miro.medium.com/max/360/0*1SkS3mSorArvY9kS.jpg" width="100px;" alt="Foto von Steve Jobs"/><br>
+     
         <sub>
           <b>Du!</b>
         </sub>
