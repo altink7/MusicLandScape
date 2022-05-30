@@ -76,7 +76,7 @@ Wir danken folgenden Personen, die zu diesem Projekt beigetragen haben:
       <a href="#">
         <br>
         <sub>
-          <h1>Altin Kelmendi</h1>
+          <h2>Altin Kelmendi</h2>
         </sub>
       </a>
     </td>
@@ -84,7 +84,7 @@ Wir danken folgenden Personen, die zu diesem Projekt beigetragen haben:
       <a href="#">
        <br>
         <sub>
-          <h1>Julian Hoffmann</h1>
+          <h2>Julian Hoffmann</h2>
         </sub>
       </a>
     </td>
