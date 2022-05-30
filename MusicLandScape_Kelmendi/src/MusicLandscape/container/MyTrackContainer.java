@@ -60,6 +60,7 @@ public class MyTrackContainer {
             tracks1.remove(track);
             i++;
         }
+
         reset();
 
        return i;
@@ -75,8 +76,7 @@ public class MyTrackContainer {
     }
 
     public Track[] selection(){
-        Track[] t= selection.toArray(new Track[0]);
-        return t;
+        return selection.toArray(new Track[0]);
     }
 
     public boolean add(Track track){
