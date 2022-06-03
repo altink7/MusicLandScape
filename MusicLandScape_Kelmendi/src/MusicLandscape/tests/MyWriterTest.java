@@ -13,6 +13,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import static org.testng.Assert.*;
 
+import MusicLandscape.util.MyFormatter;
 import org.testng.annotations.Test;
 
 import MusicLandscape.entities.Artist;

@@ -58,6 +58,9 @@ public abstract class MyReader<T> {
 		this.in = in;
 	}
 
+	protected MyReader() {
+	}
+
 	/**
 	 * 
 	 * Gets the next object from the underlying stream.<br>
@@ -68,5 +71,5 @@ public abstract class MyReader<T> {
 	 * 
 	 * @return the next record as an object with all values set
 	 */
-	public abstract T get();
+	public abstract T get() throws Exception;
 }
