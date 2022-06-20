@@ -2,34 +2,36 @@ package MusicLandscape.util.io;
 
 import MusicLandscape.entities.Track;
 import MusicLandscape.util.MyFormatter;
+
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class MyWriter <T>{
+    protected FileWriter out;
 
-    protected java.io.FileWriter out;
     private MyFormatter<T> theFormat;
 
-    public MyWriter(java.io.FileWriter file, MyFormatter<T> theFormat)throws IllegalArgumentException{
-        if(file==null){
+    public MyWriter(FileWriter file, MyFormatter<T> theFormat) {
+        if (file == null)
             throw new IllegalArgumentException("expected non-null FileWriter");
-        }
-        if(theFormat==null){
+        if(theFormat == null)
             throw new IllegalArgumentException("expected non-null MyFormatter");
+        this.out = file;
+        this.theFormat = theFormat;
+    }
+
+    public final boolean put(T t){
+        try {
+            out.write(theFormat.format(t) + "\n");
+            return true;
         }
-        out=file;
-        this.theFormat=theFormat;
+        catch (IOException e){
+            e.printStackTrace();
+            return false;
+        }
     }
 
     public void close() throws IOException {
         out.close();
-    }
-
-    public boolean put(T t) {
-        try {
-            out.write(theFormat.format(t));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return true;
     }
 }

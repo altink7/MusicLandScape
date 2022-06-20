@@ -114,7 +114,7 @@ public class MyTrackCSVReaderTest {
 		  String text=",,,,Error parsing.";
 		  
 		  String toTest=sysOutContent.toString().replaceAll("(\r\n|\r|\n)", "");
-		  assertEquals(toTest, text, "text should be\",,,,\" from the line + error message");	  
+		  assertEquals(toTest, text, "text should be\",,,,\" from the line + error message");
 		  
 		  //reset output
 		  System.setOut(stdout);
